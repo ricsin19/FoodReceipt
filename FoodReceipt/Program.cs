@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace FoodReceipt
+namespace ClientcardFB3
 {
     static class Program
     {
@@ -15,7 +15,7 @@ namespace FoodReceipt
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SelectDonor());
+            Application.Run(new LoginForm());
         }
     }
 }
