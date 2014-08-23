@@ -30,16 +30,31 @@ namespace ClientcardFB3
         {
             IEnumerator enumerator = this.tabPage2.Controls.GetEnumerator();
             clsFoodDonations.getFavorite();
-
-            for (int i = 0; i < clsFoodDonations.RowCount; i++)
+            try
             {
-                enumerator.MoveNext();
-                System.Windows.Forms.Button button = (System.Windows.Forms.Button)enumerator.Current;
-                button.Text = clsFoodDonations.DSet.Tables["FoodDonations"].Rows[i][1].ToString();
-                button.Name = clsFoodDonations.DSet.Tables["FoodDonations"].Rows[i][0].ToString();
+                for (int i = 0; i < clsFoodDonations.RowCount; i++)
+                {
+                    enumerator.MoveNext();
+                    System.Windows.Forms.Button button = (System.Windows.Forms.Button)enumerator.Current;
+                    button.Text = clsFoodDonations.DSet.Tables["FoodDonations"].Rows[i][1].ToString();
+                    button.Name = clsFoodDonations.DSet.Tables["FoodDonations"].Rows[i][0].ToString();
 
+                }
+                enumerator.Reset();
+                for (int j = 0; j < 20; j++)
+                {
+                    enumerator.MoveNext();
+                    System.Windows.Forms.Button button = (System.Windows.Forms.Button)enumerator.Current;
+                    if (button.Text == "")
+                    {
+                        button.Hide();
+                    }
+                }
             }
-
+            catch (Exception ex)
+            {
+                CCFBGlobal.appendErrorToErrorReport("", ex.GetBaseException().ToString());
+            }
         }
         private void SelectDonor_FormClosing(object sender, FormClosingEventArgs e)
         {
