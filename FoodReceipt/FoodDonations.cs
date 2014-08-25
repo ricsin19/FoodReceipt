@@ -12,6 +12,7 @@ namespace ClientcardFB3
         SqlCommand command;
         System.Data.SqlClient.SqlConnection conn;
         static string tbName = "FoodDonations";
+   
         int iRowCount = 0;
         bool isValid = false;
         DataRow dRow = null;
