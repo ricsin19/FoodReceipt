@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
@@ -112,9 +113,9 @@
             this.button70 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dgvDonorList = new System.Windows.Forms.DataGridView();
+            this.donorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.donorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -122,7 +123,7 @@
             this.tabPage4.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDonorList)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -375,6 +376,7 @@
             this.button22.Size = new System.Drawing.Size(127, 64);
             this.button22.TabIndex = 40;
             this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
             // button23
             // 
@@ -383,6 +385,7 @@
             this.button23.Size = new System.Drawing.Size(127, 63);
             this.button23.TabIndex = 41;
             this.button23.UseVisualStyleBackColor = true;
+            this.button23.Click += new System.EventHandler(this.button23_Click);
             // 
             // button24
             // 
@@ -391,6 +394,7 @@
             this.button24.Size = new System.Drawing.Size(127, 67);
             this.button24.TabIndex = 42;
             this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
             // 
             // button25
             // 
@@ -399,6 +403,7 @@
             this.button25.Size = new System.Drawing.Size(124, 61);
             this.button25.TabIndex = 43;
             this.button25.UseVisualStyleBackColor = true;
+            this.button25.Click += new System.EventHandler(this.button25_Click);
             // 
             // button26
             // 
@@ -407,6 +412,7 @@
             this.button26.Size = new System.Drawing.Size(127, 61);
             this.button26.TabIndex = 44;
             this.button26.UseVisualStyleBackColor = true;
+            this.button26.Click += new System.EventHandler(this.button26_Click);
             // 
             // button27
             // 
@@ -415,6 +421,7 @@
             this.button27.Size = new System.Drawing.Size(127, 63);
             this.button27.TabIndex = 45;
             this.button27.UseVisualStyleBackColor = true;
+            this.button27.Click += new System.EventHandler(this.button27_Click);
             // 
             // button28
             // 
@@ -423,6 +430,7 @@
             this.button28.Size = new System.Drawing.Size(127, 64);
             this.button28.TabIndex = 46;
             this.button28.UseVisualStyleBackColor = true;
+            this.button28.Click += new System.EventHandler(this.button28_Click);
             // 
             // button29
             // 
@@ -431,6 +439,7 @@
             this.button29.Size = new System.Drawing.Size(127, 63);
             this.button29.TabIndex = 47;
             this.button29.UseVisualStyleBackColor = true;
+            this.button29.Click += new System.EventHandler(this.button29_Click);
             // 
             // button30
             // 
@@ -439,6 +448,7 @@
             this.button30.Size = new System.Drawing.Size(127, 63);
             this.button30.TabIndex = 48;
             this.button30.UseVisualStyleBackColor = true;
+            this.button30.Click += new System.EventHandler(this.button30_Click);
             // 
             // button31
             // 
@@ -447,6 +457,7 @@
             this.button31.Size = new System.Drawing.Size(127, 61);
             this.button31.TabIndex = 49;
             this.button31.UseVisualStyleBackColor = true;
+            this.button31.Click += new System.EventHandler(this.button31_Click);
             // 
             // button32
             // 
@@ -455,6 +466,7 @@
             this.button32.Size = new System.Drawing.Size(130, 63);
             this.button32.TabIndex = 50;
             this.button32.UseVisualStyleBackColor = true;
+            this.button32.Click += new System.EventHandler(this.button32_Click);
             // 
             // button33
             // 
@@ -463,6 +475,7 @@
             this.button33.Size = new System.Drawing.Size(127, 63);
             this.button33.TabIndex = 51;
             this.button33.UseVisualStyleBackColor = true;
+            this.button33.Click += new System.EventHandler(this.button33_Click);
             // 
             // button34
             // 
@@ -471,6 +484,7 @@
             this.button34.Size = new System.Drawing.Size(130, 64);
             this.button34.TabIndex = 52;
             this.button34.UseVisualStyleBackColor = true;
+            this.button34.Click += new System.EventHandler(this.button34_Click);
             // 
             // button35
             // 
@@ -479,6 +493,7 @@
             this.button35.Size = new System.Drawing.Size(127, 63);
             this.button35.TabIndex = 54;
             this.button35.UseVisualStyleBackColor = true;
+            this.button35.Click += new System.EventHandler(this.button35_Click);
             // 
             // button36
             // 
@@ -487,6 +502,7 @@
             this.button36.Size = new System.Drawing.Size(127, 63);
             this.button36.TabIndex = 55;
             this.button36.UseVisualStyleBackColor = true;
+            this.button36.Click += new System.EventHandler(this.button36_Click);
             // 
             // tabPage3
             // 
@@ -898,11 +914,11 @@
             this.panel1.AutoScroll = true;
             this.panel1.AutoSize = true;
             this.panel1.Controls.Add(this.radioButton1);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dgvDonorList);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(551, 8);
+            this.panel1.Location = new System.Drawing.Point(567, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1278, 720);
+            this.panel1.Size = new System.Drawing.Size(675, 658);
             this.panel1.TabIndex = 4;
             // 
             // radioButton1
@@ -918,44 +934,72 @@
             this.radioButton1.Text = "Select Donor";
             this.radioButton1.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // dgvDonorList
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2});
-            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 90);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.RowTemplate.Height = 66;
-            this.dataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(700, 562);
-            this.dataGridView1.TabIndex = 2;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgvDonorList.AllowUserToAddRows = false;
+            this.dgvDonorList.AllowUserToDeleteRows = false;
+            this.dgvDonorList.AllowUserToResizeRows = false;
+            this.dgvDonorList.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvDonorList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvDonorList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDonorList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvDonorList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDonorList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.donorID,
+            this.donorName});
+            this.dgvDonorList.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvDonorList.Location = new System.Drawing.Point(1, 71);
+            this.dgvDonorList.Margin = new System.Windows.Forms.Padding(0);
+            this.dgvDonorList.MultiSelect = false;
+            this.dgvDonorList.Name = "dgvDonorList";
+            this.dgvDonorList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvDonorList.RowHeadersVisible = false;
+            this.dgvDonorList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvDonorList.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvDonorList.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvDonorList.RowTemplate.Height = 66;
+            this.dgvDonorList.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDonorList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgvDonorList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDonorList.Size = new System.Drawing.Size(674, 558);
+            this.dgvDonorList.TabIndex = 2;
+            this.dgvDonorList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // Column1
+            // donorID
             // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Column1.HeaderText = "Column1";
-            this.Column1.Name = "Column1";
+            this.donorID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.donorID.DefaultCellStyle = dataGridViewCellStyle2;
+            this.donorID.FillWeight = 80F;
+            this.donorID.Frozen = true;
+            this.donorID.HeaderText = "ID";
+            this.donorID.Name = "donorID";
+            this.donorID.ReadOnly = true;
+            this.donorID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.donorID.Width = 80;
             // 
-            // Column2
+            // donorName
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Column2.HeaderText = "Column2";
-            this.Column2.Name = "Column2";
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Column2.Width = 800;
+            this.donorName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(4);
+            this.donorName.DefaultCellStyle = dataGridViewCellStyle3;
+            this.donorName.FillWeight = 592F;
+            this.donorName.Frozen = true;
+            this.donorName.HeaderText = "Name";
+            this.donorName.Name = "donorName";
+            this.donorName.ReadOnly = true;
+            this.donorName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.donorName.Width = 592;
             // 
             // SelectDonor
             // 
@@ -978,7 +1022,7 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDonorList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -992,9 +1036,7 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewButtonColumn Column2;
+        private System.Windows.Forms.DataGridView dgvDonorList;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Button button19;
@@ -1070,6 +1112,8 @@
         private System.Windows.Forms.Button button71;
         private System.Windows.Forms.Button button36;
         private System.Windows.Forms.Button button72;
+        private System.Windows.Forms.DataGridViewTextBoxColumn donorID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn donorName;
     }
 }
 

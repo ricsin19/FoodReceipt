@@ -519,8 +519,6 @@ namespace ClientcardFB3
                 return isValid = false;
             }
         }
-  
-  
         public void openWhere(string sWhereClause = "")
         {
             try
@@ -531,9 +529,9 @@ namespace ClientcardFB3
                 dset.Clear();
                 iRowCount = dadAdpt.Fill(dset, tbName);
                 closeConnection();
-                if (iRowCount > 0)
+                for (int i = 0; i < iRowCount; i++)
                 {
-                    drow = dset.Tables[tbName].Rows[0];
+                    drow = dset.Tables[tbName].Rows[i];
                 }
                 isValid = false;
             }
