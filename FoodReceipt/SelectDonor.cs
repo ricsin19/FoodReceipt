@@ -152,7 +152,7 @@ namespace ClientcardFB3
 
         //Favorite button click
 
-        private void favBtn_Click(object sender, EventArgs e)
+        private void favBtn_Click(object sender, MouseEventArgs e)
         {
             Button b = (Button)sender;
             FoodDonation frm2 = new FoodDonation(b.Name, b.Text);
@@ -161,20 +161,20 @@ namespace ClientcardFB3
 
         //Donor Type button click  
 
-        private void dnrTypeBtn_Click(object sender, EventArgs e)
+        private void dnrTypeBtn_Click(object sender, MouseEventArgs e)
         {
             fillDataGrid_DnrType(((Button)sender).Name);
         }
         //Alphabet button click
 
-        private void alphabetBtn_Click(object sender, EventArgs e)
+        private void alphabetBtn_Click(object sender, MouseEventArgs e)
         {
             fillDataGridFilterByAlphabet(((Button)sender).Text);
         }
 
         //NumPad button click
 
-        private void numPadBtn_Click(object sender, EventArgs e)
+        private void numPadBtn_Click(object sender, MouseEventArgs e)
         {
             int num = Convert.ToInt32(((Button)sender).Text);
 
@@ -186,12 +186,12 @@ namespace ClientcardFB3
             textBox1.Text += ((Button)sender).Text;
         }
 
-        private void numpadCLR_Click(object sender, EventArgs e)
+        private void numpadCLR_Click(object sender, MouseEventArgs e)
         {
             textBox1.Clear();
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void btnSearch_Click(object sender, MouseEventArgs e)
         {
             if (string.IsNullOrEmpty(textBox1.Text))
             {
