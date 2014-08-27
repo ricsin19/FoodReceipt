@@ -568,7 +568,7 @@ namespace ClientcardFB3
                     dadAdpt.Update(dset, "Donors");
                     closeConnection();
                 }
-                catch (SqlException) { }
+                catch (SqlException ex) { }
             }
         }
 

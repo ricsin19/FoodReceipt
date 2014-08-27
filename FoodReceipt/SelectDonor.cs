@@ -19,7 +19,7 @@ namespace ClientcardFB3
         FoodDonations clsFoodDonations = new FoodDonations(CCFBGlobal.connectionString);
         Donors clsDonors = new Donors(CCFBGlobal.connectionString);
         parmTypeCodes parmDonorTypeCode = new parmTypeCodes(CCFBGlobal.parmTbl_Donor, CCFBGlobal.connectionString, "");
-
+        public DataGridView dataGridView1;
 
         public SelectDonor(LoginForm loginform)
         {
@@ -34,18 +34,15 @@ namespace ClientcardFB3
             IEnumerator enumerator1 = this.tabPage1.Controls.GetEnumerator();
             clsFoodDonations.getFavorite();
             System.Windows.Forms.Button button;
-
             try
             {
-
                 for (int i = 0; i < clsFoodDonations.RowCount; i++)
                 {
                     enumerator.MoveNext();
                     button = (System.Windows.Forms.Button)enumerator.Current;
                     button.Text = clsFoodDonations.DSet.Tables["FoodDonations"].Rows[i][1].ToString();
                     button.Name = clsFoodDonations.DSet.Tables["FoodDonations"].Rows[i][0].ToString();
-
-                }
+                }   
                 for (int j = 0; j < this.tabPage2.Controls.Count; j++)
                 {
                     enumerator.MoveNext();
@@ -55,13 +52,6 @@ namespace ClientcardFB3
                         button.Hide();
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                CCFBGlobal.appendErrorToErrorReport("", ex.GetBaseException().ToString());
-            }
-            try
-            {
                 for (int i = 0; i < parmDonorTypeCode.TypeCodesArray.Count; i++)
                 {
                     enumerator1.MoveNext();
@@ -79,6 +69,7 @@ namespace ClientcardFB3
                         button.Hide();
                     }
                 }
+
             }
             catch (Exception ex)
             {
@@ -91,123 +82,32 @@ namespace ClientcardFB3
             frmLogIn.Close();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
-
-        private void fillDataGrid(String buttonID)
+        private void fillDataGrid_DnrType(String buttonID)
         {
             int val = Convert.ToInt32(buttonID);
             string whereClause = " WHERE RcdType=" + val;
             clsDonors.openWhere(whereClause);
-            dgvDonorList.Rows.Clear();
-            string ID = "";
-            string Name = "";
-            DataGridViewRow dvr;
-            int rowCount = 0;
-            for (int i = 0; i < clsDonors.RowCount; i++)
-            {
-                try
-                {
-                    clsDonors.setDataRow(i);
-                    Name = clsDonors.DSet.Tables["Donors"].Rows[i][2].ToString();
-                    ID = clsDonors.DSet.Tables["Donors"].Rows[i][0].ToString();
-
-                    //DataGrid View
-                    dgvDonorList.Rows.Add(ID, Name);
-                    dvr = dgvDonorList.Rows[rowCount];
-                    rowCount++;           
-                }
-                catch (Exception ex)
-                {
-                    CCFBGlobal.appendErrorToErrorReport("", ex.GetBaseException().ToString());
-                }
-            }
+            fillDgv();
         }
-        private void button21_Click(object sender, EventArgs e)
-        {
-            fillDataGrid(button21.Name);
-        }
-
-        private void button22_Click(object sender, EventArgs e)
-        {
-            fillDataGrid(button22.Name);
-        }
-
-        private void button23_Click(object sender, EventArgs e)
-        {
-            fillDataGrid(button23.Name);
-        }
-
-        private void button24_Click(object sender, EventArgs e)
-        {
-            fillDataGrid(button24.Name);
-        }
-
-        private void button25_Click(object sender, EventArgs e)
-        {
-            fillDataGrid(button25.Name);
-        }
-
-        private void button26_Click(object sender, EventArgs e)
-        {
-            fillDataGrid(button26.Name);
-        }
-
-        private void button27_Click(object sender, EventArgs e)
-        {
-            fillDataGrid(button27.Name);
-        }
-
-        private void button28_Click(object sender, EventArgs e)
-        {
-            fillDataGrid(button28.Name);
-        }
-
-        private void button29_Click(object sender, EventArgs e)
-        {
-            fillDataGrid(button29.Name);
-        }
-
-        private void button30_Click(object sender, EventArgs e)
-        {
-            fillDataGrid(button30.Name);
-        }
-
-        private void button31_Click(object sender, EventArgs e)
-        {
-            fillDataGrid(button31.Name);
-        }
-
-        private void button32_Click(object sender, EventArgs e)
-        {
-            fillDataGrid(button32.Name);
-        }
-
-        private void button33_Click(object sender, EventArgs e)
-        {
-            fillDataGrid(button33.Name);
-        }
-
-        private void button34_Click(object sender, EventArgs e)
-        {
-            fillDataGrid(button34.Name);
-        }
-
-        private void button35_Click(object sender, EventArgs e)
-        {
-            fillDataGrid(button35.Name);
-        }
-
-        private void button36_Click(object sender, EventArgs e)
-        {
-            fillDataGrid(button36.Name);
-        }
-
         private void fillDataGridFilterByAlphabet(String StartsWith)
         {
             string whereClause = " WHERE Name LIKE '" + StartsWith + "%'";
             clsDonors.openWhere(whereClause);
+            fillDgv();
+        }
+
+        private void fillDataGrid_DnrID(String text)
+        {
+            if (text != "")
+            {
+                int val = Convert.ToInt32(text);
+                clsDonors.open(val);
+                fillDgv();
+            }
+        }
+
+        public void fillDgv()
+        {
             dgvDonorList.Rows.Clear();
             string ID = "";
             string Name = "";
@@ -233,12 +133,47 @@ namespace ClientcardFB3
             }
         }
 
-        private void Alphabet_Click(object sender, EventArgs e)
+        public void dgvDonorList_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            try
+            {
+                int selectedRowIndex = dgvDonorList.CurrentCell.RowIndex;
+                string ID = dgvDonorList.Rows[selectedRowIndex].Cells[0].Value.ToString().Trim();
+                string Name = dgvDonorList.Rows[selectedRowIndex].Cells[1].Value.ToString();
+                FoodDonation frm2 = new FoodDonation(ID, Name);
+                frm2.Show();
+            }
+            catch (Exception ex)
+            {
+                CCFBGlobal.appendErrorToErrorReport("", ex.GetBaseException().ToString());
+            }
+        }
+
+        //Favorite button click
+
+        private void favBtn_Click(object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+            FoodDonation frm2 = new FoodDonation(b.Name, b.Text);
+            frm2.Show();
+        }
+
+        //Donor Type button click  
+
+        private void dnrTypeBtn_Click(object sender, EventArgs e)
+        {
+            fillDataGrid_DnrType(((Button)sender).Name);
+        }
+        //Alphabet button click
+
+        private void alphabetBtn_Click(object sender, EventArgs e)
         {
             fillDataGridFilterByAlphabet(((Button)sender).Text);
         }
 
-        private void button61_Click(object sender, EventArgs e)
+        //NumPad button click
+
+        private void numPadBtn_Click(object sender, EventArgs e)
         {
             int num = Convert.ToInt32(((Button)sender).Text);
 
@@ -247,51 +182,21 @@ namespace ClientcardFB3
                 return;
             }
 
-            textBox1.Text += ((Button)sender).Text;            
+            textBox1.Text += ((Button)sender).Text;
         }
 
-        private void DonorID_Clear_Btn_Click(object sender, EventArgs e)
+        private void numpadCLR_Click(object sender, EventArgs e)
         {
             textBox1.Clear();
         }
 
-        private void fillDataGridFilterByDonorID(String donorID)
-        {
-            int val = Convert.ToInt32(donorID);
-            string whereClause = " WHERE ID=" + val;
-            clsDonors.openWhere(whereClause);
-            dgvDonorList.Rows.Clear();
-            string ID = "";
-            string Name = "";
-            DataGridViewRow dvr;
-            int rowCount = 0;
-            for (int i = 0; i < clsDonors.RowCount; i++)
-            {
-                try
-                {
-                    clsDonors.setDataRow(i);
-                    Name = clsDonors.DSet.Tables["Donors"].Rows[i][2].ToString();
-                    ID = clsDonors.DSet.Tables["Donors"].Rows[i][0].ToString();
-
-                    //DataGrid View
-                    dgvDonorList.Rows.Add(ID, Name);
-                    dvr = dgvDonorList.Rows[rowCount];
-                    rowCount++;
-                }
-                catch (Exception ex)
-                {
-                    CCFBGlobal.appendErrorToErrorReport("", ex.GetBaseException().ToString());
-                }
-            }
-        }
-
-        private void FindDonorID_button_Click(object sender, EventArgs e)
+        private void btnSearch_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(textBox1.Text))
             {
                 return;
             }
-            fillDataGridFilterByDonorID(textBox1.Text);
+            fillDataGrid_DnrID(textBox1.Text);
         }
     }
 }

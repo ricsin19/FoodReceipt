@@ -12,12 +12,24 @@ namespace ClientcardFB3
 {
     public partial class FoodDonation : Form
     {
-        SelectDonor loginform1;
-        public FoodDonation(SelectDonor form)
-        {
+ 
+        string donorID,donorName;
 
+        public FoodDonation( string val1, String val2)
+        {
             InitializeComponent();
-            loginform1 = form;
+            donorID = val1;
+            donorName = val2;
+        }
+        public FoodDonation()
+        {
+            InitializeComponent();
+        }
+
+        private void FoodDonation_Load(object sender, EventArgs e)
+        {
+            textBox1.Text = donorID;
+            textBox2.Text = donorName;
         }
        
     }
