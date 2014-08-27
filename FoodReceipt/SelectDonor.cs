@@ -20,6 +20,7 @@ namespace ClientcardFB3
         Donors clsDonors = new Donors(CCFBGlobal.connectionString);
         parmTypeCodes parmDonorTypeCode = new parmTypeCodes(CCFBGlobal.parmTbl_Donor, CCFBGlobal.connectionString, "");
         public DataGridView dataGridView1;
+        
 
         public SelectDonor(LoginForm loginform)
         {
@@ -198,5 +199,10 @@ namespace ClientcardFB3
             }
             fillDataGrid_DnrID(textBox1.Text);
         }
+        void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dgvDonorList.Rows.Clear();
+        }
+        
     }
 }
