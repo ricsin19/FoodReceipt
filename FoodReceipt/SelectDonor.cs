@@ -204,5 +204,39 @@ namespace ClientcardFB3
             fillDataGrid(button36.Name);
         }
 
+        private void fillDataGridFilterByAlphabet(String StartsWith)
+        {
+            string whereClause = " WHERE Name LIKE '" + StartsWith + "%'";
+            clsDonors.openWhere(whereClause);
+            dgvDonorList.Rows.Clear();
+            string ID = "";
+            string Name = "";
+            DataGridViewRow dvr;
+            int rowCount = 0;
+            for (int i = 0; i < clsDonors.RowCount; i++)
+            {
+                try
+                {
+                    clsDonors.setDataRow(i);
+                    Name = clsDonors.DSet.Tables["Donors"].Rows[i][2].ToString();
+                    ID = clsDonors.DSet.Tables["Donors"].Rows[i][0].ToString();
+
+                    //DataGrid View
+                    dgvDonorList.Rows.Add(ID, Name);
+                    dvr = dgvDonorList.Rows[rowCount];
+                    rowCount++;
+                }
+                catch (Exception ex)
+                {
+                    CCFBGlobal.appendErrorToErrorReport("", ex.GetBaseException().ToString());
+                }
+            }
+        }
+
+        private void Alphabet_Click(object sender, EventArgs e)
+        {
+            fillDataGridFilterByAlphabet(((Button)sender).Text);
+        }
+
     }
 }

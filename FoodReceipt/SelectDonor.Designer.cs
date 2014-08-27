@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
@@ -139,7 +139,7 @@
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(544, 662);
+            this.tabControl1.Size = new System.Drawing.Size(544, 704);
             this.tabControl1.TabIndex = 3;
             // 
             // tabPage2
@@ -166,10 +166,10 @@
             this.tabPage2.Controls.Add(this.button19);
             this.tabPage2.Controls.Add(this.button20);
             this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage2.Location = new System.Drawing.Point(4, 84);
+            this.tabPage2.Location = new System.Drawing.Point(4, 167);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(536, 574);
+            this.tabPage2.Size = new System.Drawing.Size(536, 491);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Favorites";
             // 
@@ -353,10 +353,10 @@
             this.tabPage1.Controls.Add(this.button35);
             this.tabPage1.Controls.Add(this.button36);
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 84);
+            this.tabPage1.Location = new System.Drawing.Point(4, 167);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(536, 574);
+            this.tabPage1.Size = new System.Drawing.Size(536, 491);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Donor Type";
             // 
@@ -533,253 +533,279 @@
             this.tabPage3.Controls.Add(this.button39);
             this.tabPage3.Controls.Add(this.button38);
             this.tabPage3.Controls.Add(this.button37);
-            this.tabPage3.Location = new System.Drawing.Point(4, 84);
+            this.tabPage3.Location = new System.Drawing.Point(4, 167);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(536, 574);
+            this.tabPage3.Size = new System.Drawing.Size(536, 533);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Alpabetical";
             // 
             // button72
             // 
-            this.button72.Location = new System.Drawing.Point(403, 315);
+            this.button72.Location = new System.Drawing.Point(432, 92);
             this.button72.Name = "button72";
             this.button72.Size = new System.Drawing.Size(90, 71);
             this.button72.TabIndex = 80;
             this.button72.Text = "Z";
             this.button72.UseVisualStyleBackColor = true;
+            this.button72.Click += new System.EventHandler(this.Alphabet_Click);
             // 
             // button71
             // 
-            this.button71.Location = new System.Drawing.Point(403, 238);
+            this.button71.Location = new System.Drawing.Point(432, 14);
             this.button71.Name = "button71";
             this.button71.Size = new System.Drawing.Size(90, 71);
             this.button71.TabIndex = 79;
             this.button71.Text = "Y";
             this.button71.UseVisualStyleBackColor = true;
+            this.button71.Click += new System.EventHandler(this.Alphabet_Click);
             // 
             // button60
             // 
-            this.button60.Location = new System.Drawing.Point(403, 161);
+            this.button60.Location = new System.Drawing.Point(325, 403);
             this.button60.Name = "button60";
             this.button60.Size = new System.Drawing.Size(90, 71);
             this.button60.TabIndex = 78;
             this.button60.Text = "X";
             this.button60.UseVisualStyleBackColor = true;
+            this.button60.Click += new System.EventHandler(this.Alphabet_Click);
             // 
             // button59
             // 
-            this.button59.Location = new System.Drawing.Point(403, 84);
+            this.button59.Location = new System.Drawing.Point(325, 322);
             this.button59.Name = "button59";
             this.button59.Size = new System.Drawing.Size(90, 71);
             this.button59.TabIndex = 77;
             this.button59.Text = "W";
             this.button59.UseVisualStyleBackColor = true;
+            this.button59.Click += new System.EventHandler(this.Alphabet_Click);
             // 
             // button58
             // 
-            this.button58.Location = new System.Drawing.Point(403, 6);
+            this.button58.Location = new System.Drawing.Point(325, 246);
             this.button58.Name = "button58";
             this.button58.Size = new System.Drawing.Size(90, 71);
             this.button58.TabIndex = 76;
             this.button58.Text = "V";
             this.button58.UseVisualStyleBackColor = true;
+            this.button58.Click += new System.EventHandler(this.Alphabet_Click);
             // 
             // button57
             // 
-            this.button57.Location = new System.Drawing.Point(291, 474);
+            this.button57.Location = new System.Drawing.Point(325, 169);
             this.button57.Name = "button57";
             this.button57.Size = new System.Drawing.Size(90, 71);
             this.button57.TabIndex = 75;
             this.button57.Text = "U";
             this.button57.UseVisualStyleBackColor = true;
+            this.button57.Click += new System.EventHandler(this.Alphabet_Click);
             // 
             // button56
             // 
-            this.button56.Location = new System.Drawing.Point(291, 392);
+            this.button56.Location = new System.Drawing.Point(325, 92);
             this.button56.Name = "button56";
             this.button56.Size = new System.Drawing.Size(90, 71);
             this.button56.TabIndex = 74;
-            this.button56.Text = "U";
+            this.button56.Text = "T";
             this.button56.UseVisualStyleBackColor = true;
+            this.button56.Click += new System.EventHandler(this.Alphabet_Click);
             // 
             // button55
             // 
-            this.button55.Location = new System.Drawing.Point(291, 315);
+            this.button55.Location = new System.Drawing.Point(325, 14);
             this.button55.Name = "button55";
             this.button55.Size = new System.Drawing.Size(90, 71);
             this.button55.TabIndex = 73;
             this.button55.Text = "S";
             this.button55.UseVisualStyleBackColor = true;
+            this.button55.Click += new System.EventHandler(this.Alphabet_Click);
             // 
             // button54
             // 
-            this.button54.Location = new System.Drawing.Point(291, 238);
+            this.button54.Location = new System.Drawing.Point(219, 403);
             this.button54.Name = "button54";
             this.button54.Size = new System.Drawing.Size(90, 71);
             this.button54.TabIndex = 72;
             this.button54.Text = "R";
             this.button54.UseVisualStyleBackColor = true;
+            this.button54.Click += new System.EventHandler(this.Alphabet_Click);
             // 
             // button53
             // 
-            this.button53.Location = new System.Drawing.Point(291, 161);
+            this.button53.Location = new System.Drawing.Point(219, 322);
             this.button53.Name = "button53";
             this.button53.Size = new System.Drawing.Size(90, 71);
             this.button53.TabIndex = 71;
             this.button53.Text = "Q";
             this.button53.UseVisualStyleBackColor = true;
+            this.button53.Click += new System.EventHandler(this.Alphabet_Click);
             // 
             // button52
             // 
-            this.button52.Location = new System.Drawing.Point(291, 84);
+            this.button52.Location = new System.Drawing.Point(219, 246);
             this.button52.Name = "button52";
             this.button52.Size = new System.Drawing.Size(90, 71);
             this.button52.TabIndex = 70;
             this.button52.Text = "P";
             this.button52.UseVisualStyleBackColor = true;
+            this.button52.Click += new System.EventHandler(this.Alphabet_Click);
             // 
             // button51
             // 
-            this.button51.Location = new System.Drawing.Point(291, 6);
+            this.button51.Location = new System.Drawing.Point(219, 169);
             this.button51.Name = "button51";
             this.button51.Size = new System.Drawing.Size(90, 71);
             this.button51.TabIndex = 69;
             this.button51.Text = "O";
             this.button51.UseVisualStyleBackColor = true;
+            this.button51.Click += new System.EventHandler(this.Alphabet_Click);
             // 
             // button50
             // 
-            this.button50.Location = new System.Drawing.Point(177, 474);
+            this.button50.Location = new System.Drawing.Point(219, 92);
             this.button50.Name = "button50";
             this.button50.Size = new System.Drawing.Size(90, 71);
             this.button50.TabIndex = 68;
             this.button50.Text = "N";
             this.button50.UseVisualStyleBackColor = true;
+            this.button50.Click += new System.EventHandler(this.Alphabet_Click);
             // 
             // button49
             // 
-            this.button49.Location = new System.Drawing.Point(177, 391);
+            this.button49.Location = new System.Drawing.Point(219, 14);
             this.button49.Name = "button49";
             this.button49.Size = new System.Drawing.Size(90, 71);
             this.button49.TabIndex = 67;
             this.button49.Text = "M";
             this.button49.UseVisualStyleBackColor = true;
+            this.button49.Click += new System.EventHandler(this.Alphabet_Click);
             // 
             // button48
             // 
-            this.button48.Location = new System.Drawing.Point(177, 315);
+            this.button48.Location = new System.Drawing.Point(113, 403);
             this.button48.Name = "button48";
             this.button48.Size = new System.Drawing.Size(90, 71);
             this.button48.TabIndex = 66;
             this.button48.Text = "L";
             this.button48.UseVisualStyleBackColor = true;
+            this.button48.Click += new System.EventHandler(this.Alphabet_Click);
             // 
             // button47
             // 
-            this.button47.Location = new System.Drawing.Point(177, 238);
+            this.button47.Location = new System.Drawing.Point(113, 322);
             this.button47.Name = "button47";
             this.button47.Size = new System.Drawing.Size(90, 71);
             this.button47.TabIndex = 65;
             this.button47.Text = "K";
             this.button47.UseVisualStyleBackColor = true;
+            this.button47.Click += new System.EventHandler(this.Alphabet_Click);
             // 
             // button46
             // 
-            this.button46.Location = new System.Drawing.Point(177, 161);
+            this.button46.Location = new System.Drawing.Point(113, 245);
             this.button46.Name = "button46";
             this.button46.Size = new System.Drawing.Size(90, 71);
             this.button46.TabIndex = 64;
             this.button46.Text = "J";
             this.button46.UseVisualStyleBackColor = true;
+            this.button46.Click += new System.EventHandler(this.Alphabet_Click);
             // 
             // button45
             // 
-            this.button45.Location = new System.Drawing.Point(177, 84);
+            this.button45.Location = new System.Drawing.Point(113, 169);
             this.button45.Name = "button45";
             this.button45.Size = new System.Drawing.Size(90, 71);
             this.button45.TabIndex = 63;
             this.button45.Text = "I";
             this.button45.UseVisualStyleBackColor = true;
+            this.button45.Click += new System.EventHandler(this.Alphabet_Click);
             // 
             // button44
             // 
-            this.button44.Location = new System.Drawing.Point(177, 6);
+            this.button44.Location = new System.Drawing.Point(113, 92);
             this.button44.Name = "button44";
             this.button44.Size = new System.Drawing.Size(90, 71);
             this.button44.TabIndex = 62;
             this.button44.Text = "H";
             this.button44.UseVisualStyleBackColor = true;
+            this.button44.Click += new System.EventHandler(this.Alphabet_Click);
             // 
             // button43
             // 
-            this.button43.Location = new System.Drawing.Point(50, 474);
+            this.button43.Location = new System.Drawing.Point(113, 14);
             this.button43.Name = "button43";
             this.button43.Size = new System.Drawing.Size(90, 71);
             this.button43.TabIndex = 61;
             this.button43.Text = "G";
             this.button43.UseVisualStyleBackColor = true;
+            this.button43.Click += new System.EventHandler(this.Alphabet_Click);
             // 
             // button42
             // 
-            this.button42.Location = new System.Drawing.Point(50, 392);
+            this.button42.Location = new System.Drawing.Point(8, 403);
             this.button42.Name = "button42";
             this.button42.Size = new System.Drawing.Size(90, 71);
             this.button42.TabIndex = 60;
             this.button42.Text = "F";
             this.button42.UseVisualStyleBackColor = true;
+            this.button42.Click += new System.EventHandler(this.Alphabet_Click);
             // 
             // button41
             // 
-            this.button41.Location = new System.Drawing.Point(50, 314);
+            this.button41.Location = new System.Drawing.Point(8, 322);
             this.button41.Name = "button41";
             this.button41.Size = new System.Drawing.Size(90, 71);
             this.button41.TabIndex = 59;
             this.button41.Text = "E";
             this.button41.UseVisualStyleBackColor = true;
+            this.button41.Click += new System.EventHandler(this.Alphabet_Click);
             // 
             // button40
             // 
-            this.button40.Location = new System.Drawing.Point(50, 238);
+            this.button40.Location = new System.Drawing.Point(8, 245);
             this.button40.Name = "button40";
             this.button40.Size = new System.Drawing.Size(90, 71);
             this.button40.TabIndex = 58;
             this.button40.Text = "D";
             this.button40.UseVisualStyleBackColor = true;
+            this.button40.Click += new System.EventHandler(this.Alphabet_Click);
             // 
             // button39
             // 
-            this.button39.Location = new System.Drawing.Point(50, 161);
+            this.button39.Location = new System.Drawing.Point(8, 169);
             this.button39.Name = "button39";
             this.button39.Size = new System.Drawing.Size(90, 71);
             this.button39.TabIndex = 57;
             this.button39.Text = "C";
             this.button39.UseVisualStyleBackColor = true;
+            this.button39.Click += new System.EventHandler(this.Alphabet_Click);
             // 
             // button38
             // 
-            this.button38.Location = new System.Drawing.Point(50, 84);
+            this.button38.Location = new System.Drawing.Point(8, 92);
             this.button38.Name = "button38";
             this.button38.Size = new System.Drawing.Size(90, 71);
             this.button38.TabIndex = 56;
             this.button38.Text = "B";
             this.button38.UseVisualStyleBackColor = true;
+            this.button38.Click += new System.EventHandler(this.Alphabet_Click);
             // 
             // button37
             // 
-            this.button37.Location = new System.Drawing.Point(50, 6);
+            this.button37.Location = new System.Drawing.Point(8, 14);
             this.button37.Name = "button37";
             this.button37.Size = new System.Drawing.Size(90, 71);
             this.button37.TabIndex = 55;
             this.button37.Text = "A";
             this.button37.UseVisualStyleBackColor = true;
+            this.button37.Click += new System.EventHandler(this.Alphabet_Click);
             // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.textBox1);
             this.tabPage4.Controls.Add(this.flowLayoutPanel1);
-            this.tabPage4.Location = new System.Drawing.Point(4, 84);
+            this.tabPage4.Location = new System.Drawing.Point(4, 167);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(536, 574);
+            this.tabPage4.Size = new System.Drawing.Size(536, 491);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Donor ID";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -788,7 +814,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(130, 96);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(271, 29);
+            this.textBox1.Size = new System.Drawing.Size(271, 35);
             this.textBox1.TabIndex = 1;
             // 
             // flowLayoutPanel1
@@ -918,7 +944,7 @@
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(567, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(675, 658);
+            this.panel1.Size = new System.Drawing.Size(675, 696);
             this.panel1.TabIndex = 4;
             // 
             // radioButton1
@@ -928,7 +954,7 @@
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton1.Location = new System.Drawing.Point(20, 20);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(120, 24);
+            this.radioButton1.Size = new System.Drawing.Size(146, 29);
             this.radioButton1.TabIndex = 3;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Select Donor";
@@ -942,15 +968,15 @@
             this.dgvDonorList.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvDonorList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvDonorList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDonorList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle17.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDonorList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dgvDonorList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDonorList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.donorID,
@@ -963,8 +989,8 @@
             this.dgvDonorList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvDonorList.RowHeadersVisible = false;
             this.dgvDonorList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvDonorList.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvDonorList.RowsDefaultCellStyle = dataGridViewCellStyle20;
             this.dgvDonorList.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvDonorList.RowTemplate.Height = 66;
             this.dgvDonorList.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -977,8 +1003,8 @@
             // donorID
             // 
             this.donorID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.donorID.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.donorID.DefaultCellStyle = dataGridViewCellStyle18;
             this.donorID.FillWeight = 80F;
             this.donorID.Frozen = true;
             this.donorID.HeaderText = "ID";
@@ -990,9 +1016,9 @@
             // donorName
             // 
             this.donorName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(4);
-            this.donorName.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Lucida Fax", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.Padding = new System.Windows.Forms.Padding(4);
+            this.donorName.DefaultCellStyle = dataGridViewCellStyle19;
             this.donorName.FillWeight = 592F;
             this.donorName.Frozen = true;
             this.donorName.HeaderText = "Name";
@@ -1003,10 +1029,10 @@
             // 
             // SelectDonor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1262, 682);
+            this.ClientSize = new System.Drawing.Size(1282, 724);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
