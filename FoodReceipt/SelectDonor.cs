@@ -238,5 +238,60 @@ namespace ClientcardFB3
             fillDataGridFilterByAlphabet(((Button)sender).Text);
         }
 
+        private void button61_Click(object sender, EventArgs e)
+        {
+            int num = Convert.ToInt32(((Button)sender).Text);
+
+            if (string.IsNullOrEmpty(textBox1.Text) && num == 0)
+            {
+                return;
+            }
+
+            textBox1.Text += ((Button)sender).Text;            
+        }
+
+        private void DonorID_Clear_Btn_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+        }
+
+        private void fillDataGridFilterByDonorID(String donorID)
+        {
+            int val = Convert.ToInt32(donorID);
+            string whereClause = " WHERE ID=" + val;
+            clsDonors.openWhere(whereClause);
+            dgvDonorList.Rows.Clear();
+            string ID = "";
+            string Name = "";
+            DataGridViewRow dvr;
+            int rowCount = 0;
+            for (int i = 0; i < clsDonors.RowCount; i++)
+            {
+                try
+                {
+                    clsDonors.setDataRow(i);
+                    Name = clsDonors.DSet.Tables["Donors"].Rows[i][2].ToString();
+                    ID = clsDonors.DSet.Tables["Donors"].Rows[i][0].ToString();
+
+                    //DataGrid View
+                    dgvDonorList.Rows.Add(ID, Name);
+                    dvr = dgvDonorList.Rows[rowCount];
+                    rowCount++;
+                }
+                catch (Exception ex)
+                {
+                    CCFBGlobal.appendErrorToErrorReport("", ex.GetBaseException().ToString());
+                }
+            }
+        }
+
+        private void FindDonorID_button_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBox1.Text))
+            {
+                return;
+            }
+            fillDataGridFilterByDonorID(textBox1.Text);
+        }
     }
 }

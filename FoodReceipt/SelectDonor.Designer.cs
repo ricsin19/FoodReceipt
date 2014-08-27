@@ -116,6 +116,8 @@
             this.dgvDonorList = new System.Windows.Forms.DataGridView();
             this.donorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.donorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FindDonorID_button = new System.Windows.Forms.Button();
+            this.DonorID_Clear_Btn = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -139,7 +141,7 @@
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(544, 704);
+            this.tabControl1.Size = new System.Drawing.Size(599, 647);
             this.tabControl1.TabIndex = 3;
             // 
             // tabPage2
@@ -166,10 +168,10 @@
             this.tabPage2.Controls.Add(this.button19);
             this.tabPage2.Controls.Add(this.button20);
             this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage2.Location = new System.Drawing.Point(4, 167);
+            this.tabPage2.Location = new System.Drawing.Point(4, 84);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(536, 491);
+            this.tabPage2.Size = new System.Drawing.Size(591, 559);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Favorites";
             // 
@@ -353,16 +355,16 @@
             this.tabPage1.Controls.Add(this.button35);
             this.tabPage1.Controls.Add(this.button36);
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 167);
+            this.tabPage1.Location = new System.Drawing.Point(4, 84);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(536, 491);
+            this.tabPage1.Size = new System.Drawing.Size(591, 559);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Donor Type";
             // 
             // button21
             // 
-            this.button21.Location = new System.Drawing.Point(34, 21);
+            this.button21.Location = new System.Drawing.Point(30, 19);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(127, 63);
             this.button21.TabIndex = 39;
@@ -371,7 +373,7 @@
             // 
             // button22
             // 
-            this.button22.Location = new System.Drawing.Point(34, 110);
+            this.button22.Location = new System.Drawing.Point(30, 108);
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(127, 64);
             this.button22.TabIndex = 40;
@@ -380,7 +382,7 @@
             // 
             // button23
             // 
-            this.button23.Location = new System.Drawing.Point(34, 200);
+            this.button23.Location = new System.Drawing.Point(30, 198);
             this.button23.Name = "button23";
             this.button23.Size = new System.Drawing.Size(127, 63);
             this.button23.TabIndex = 41;
@@ -389,7 +391,7 @@
             // 
             // button24
             // 
-            this.button24.Location = new System.Drawing.Point(34, 287);
+            this.button24.Location = new System.Drawing.Point(30, 285);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(127, 67);
             this.button24.TabIndex = 42;
@@ -398,7 +400,7 @@
             // 
             // button25
             // 
-            this.button25.Location = new System.Drawing.Point(37, 381);
+            this.button25.Location = new System.Drawing.Point(33, 379);
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(124, 61);
             this.button25.TabIndex = 43;
@@ -407,7 +409,7 @@
             // 
             // button26
             // 
-            this.button26.Location = new System.Drawing.Point(34, 471);
+            this.button26.Location = new System.Drawing.Point(30, 469);
             this.button26.Name = "button26";
             this.button26.Size = new System.Drawing.Size(127, 61);
             this.button26.TabIndex = 44;
@@ -416,7 +418,7 @@
             // 
             // button27
             // 
-            this.button27.Location = new System.Drawing.Point(193, 21);
+            this.button27.Location = new System.Drawing.Point(189, 19);
             this.button27.Name = "button27";
             this.button27.Size = new System.Drawing.Size(127, 63);
             this.button27.TabIndex = 45;
@@ -425,7 +427,7 @@
             // 
             // button28
             // 
-            this.button28.Location = new System.Drawing.Point(193, 110);
+            this.button28.Location = new System.Drawing.Point(189, 108);
             this.button28.Name = "button28";
             this.button28.Size = new System.Drawing.Size(127, 64);
             this.button28.TabIndex = 46;
@@ -434,7 +436,7 @@
             // 
             // button29
             // 
-            this.button29.Location = new System.Drawing.Point(193, 200);
+            this.button29.Location = new System.Drawing.Point(189, 198);
             this.button29.Name = "button29";
             this.button29.Size = new System.Drawing.Size(127, 63);
             this.button29.TabIndex = 47;
@@ -443,7 +445,7 @@
             // 
             // button30
             // 
-            this.button30.Location = new System.Drawing.Point(193, 287);
+            this.button30.Location = new System.Drawing.Point(189, 285);
             this.button30.Name = "button30";
             this.button30.Size = new System.Drawing.Size(127, 63);
             this.button30.TabIndex = 48;
@@ -452,7 +454,7 @@
             // 
             // button31
             // 
-            this.button31.Location = new System.Drawing.Point(193, 381);
+            this.button31.Location = new System.Drawing.Point(189, 379);
             this.button31.Name = "button31";
             this.button31.Size = new System.Drawing.Size(127, 61);
             this.button31.TabIndex = 49;
@@ -461,7 +463,7 @@
             // 
             // button32
             // 
-            this.button32.Location = new System.Drawing.Point(193, 471);
+            this.button32.Location = new System.Drawing.Point(189, 469);
             this.button32.Name = "button32";
             this.button32.Size = new System.Drawing.Size(130, 63);
             this.button32.TabIndex = 50;
@@ -470,7 +472,7 @@
             // 
             // button33
             // 
-            this.button33.Location = new System.Drawing.Point(358, 21);
+            this.button33.Location = new System.Drawing.Point(354, 19);
             this.button33.Name = "button33";
             this.button33.Size = new System.Drawing.Size(127, 63);
             this.button33.TabIndex = 51;
@@ -479,7 +481,7 @@
             // 
             // button34
             // 
-            this.button34.Location = new System.Drawing.Point(358, 110);
+            this.button34.Location = new System.Drawing.Point(354, 108);
             this.button34.Name = "button34";
             this.button34.Size = new System.Drawing.Size(130, 64);
             this.button34.TabIndex = 52;
@@ -488,7 +490,7 @@
             // 
             // button35
             // 
-            this.button35.Location = new System.Drawing.Point(358, 200);
+            this.button35.Location = new System.Drawing.Point(354, 198);
             this.button35.Name = "button35";
             this.button35.Size = new System.Drawing.Size(127, 63);
             this.button35.TabIndex = 54;
@@ -497,7 +499,7 @@
             // 
             // button36
             // 
-            this.button36.Location = new System.Drawing.Point(358, 287);
+            this.button36.Location = new System.Drawing.Point(354, 285);
             this.button36.Name = "button36";
             this.button36.Size = new System.Drawing.Size(127, 63);
             this.button36.TabIndex = 55;
@@ -801,20 +803,22 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.DonorID_Clear_Btn);
+            this.tabPage4.Controls.Add(this.FindDonorID_button);
             this.tabPage4.Controls.Add(this.textBox1);
             this.tabPage4.Controls.Add(this.flowLayoutPanel1);
-            this.tabPage4.Location = new System.Drawing.Point(4, 167);
+            this.tabPage4.Location = new System.Drawing.Point(4, 84);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(536, 491);
+            this.tabPage4.Size = new System.Drawing.Size(591, 559);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Donor ID";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(130, 96);
+            this.textBox1.Location = new System.Drawing.Point(99, 47);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(271, 35);
+            this.textBox1.Size = new System.Drawing.Size(283, 35);
             this.textBox1.TabIndex = 1;
             // 
             // flowLayoutPanel1
@@ -830,7 +834,7 @@
             this.flowLayoutPanel1.Controls.Add(this.button68);
             this.flowLayoutPanel1.Controls.Add(this.button69);
             this.flowLayoutPanel1.Controls.Add(this.button70);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(125, 207);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(99, 117);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(283, 293);
             this.flowLayoutPanel1.TabIndex = 0;
@@ -844,6 +848,7 @@
             this.button61.TabIndex = 0;
             this.button61.Text = "1";
             this.button61.UseVisualStyleBackColor = true;
+            this.button61.Click += new System.EventHandler(this.button61_Click);
             // 
             // button62
             // 
@@ -854,6 +859,7 @@
             this.button62.TabIndex = 1;
             this.button62.Text = "2";
             this.button62.UseVisualStyleBackColor = true;
+            this.button62.Click += new System.EventHandler(this.button61_Click);
             // 
             // button63
             // 
@@ -864,6 +870,7 @@
             this.button63.TabIndex = 2;
             this.button63.Text = "3";
             this.button63.UseVisualStyleBackColor = true;
+            this.button63.Click += new System.EventHandler(this.button61_Click);
             // 
             // button64
             // 
@@ -874,6 +881,7 @@
             this.button64.TabIndex = 3;
             this.button64.Text = "4";
             this.button64.UseVisualStyleBackColor = true;
+            this.button64.Click += new System.EventHandler(this.button61_Click);
             // 
             // button65
             // 
@@ -884,6 +892,7 @@
             this.button65.TabIndex = 4;
             this.button65.Text = "5";
             this.button65.UseVisualStyleBackColor = true;
+            this.button65.Click += new System.EventHandler(this.button61_Click);
             // 
             // button66
             // 
@@ -894,6 +903,7 @@
             this.button66.TabIndex = 5;
             this.button66.Text = "6";
             this.button66.UseVisualStyleBackColor = true;
+            this.button66.Click += new System.EventHandler(this.button61_Click);
             // 
             // button67
             // 
@@ -904,6 +914,7 @@
             this.button67.TabIndex = 6;
             this.button67.Text = "7";
             this.button67.UseVisualStyleBackColor = true;
+            this.button67.Click += new System.EventHandler(this.button61_Click);
             // 
             // button68
             // 
@@ -914,6 +925,7 @@
             this.button68.TabIndex = 7;
             this.button68.Text = "8";
             this.button68.UseVisualStyleBackColor = true;
+            this.button68.Click += new System.EventHandler(this.button61_Click);
             // 
             // button69
             // 
@@ -924,6 +936,7 @@
             this.button69.TabIndex = 8;
             this.button69.Text = "9";
             this.button69.UseVisualStyleBackColor = true;
+            this.button69.Click += new System.EventHandler(this.button61_Click);
             // 
             // button70
             // 
@@ -934,6 +947,7 @@
             this.button70.TabIndex = 9;
             this.button70.Text = "0";
             this.button70.UseVisualStyleBackColor = true;
+            this.button70.Click += new System.EventHandler(this.button61_Click);
             // 
             // panel1
             // 
@@ -942,9 +956,9 @@
             this.panel1.Controls.Add(this.radioButton1);
             this.panel1.Controls.Add(this.dgvDonorList);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(567, 12);
+            this.panel1.Location = new System.Drawing.Point(628, 8);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(675, 696);
+            this.panel1.Size = new System.Drawing.Size(675, 647);
             this.panel1.TabIndex = 4;
             // 
             // radioButton1
@@ -1027,12 +1041,32 @@
             this.donorName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.donorName.Width = 592;
             // 
+            // FindDonorID_button
+            // 
+            this.FindDonorID_button.Location = new System.Drawing.Point(104, 427);
+            this.FindDonorID_button.Name = "FindDonorID_button";
+            this.FindDonorID_button.Size = new System.Drawing.Size(127, 73);
+            this.FindDonorID_button.TabIndex = 2;
+            this.FindDonorID_button.Text = "Search";
+            this.FindDonorID_button.UseVisualStyleBackColor = true;
+            this.FindDonorID_button.Click += new System.EventHandler(this.FindDonorID_button_Click);
+            // 
+            // DonorID_Clear_Btn
+            // 
+            this.DonorID_Clear_Btn.Location = new System.Drawing.Point(248, 427);
+            this.DonorID_Clear_Btn.Name = "DonorID_Clear_Btn";
+            this.DonorID_Clear_Btn.Size = new System.Drawing.Size(118, 73);
+            this.DonorID_Clear_Btn.TabIndex = 3;
+            this.DonorID_Clear_Btn.Text = "Clear";
+            this.DonorID_Clear_Btn.UseVisualStyleBackColor = true;
+            this.DonorID_Clear_Btn.Click += new System.EventHandler(this.DonorID_Clear_Btn_Click);
+            // 
             // SelectDonor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1282, 724);
+            this.ClientSize = new System.Drawing.Size(1321, 670);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1140,6 +1174,8 @@
         private System.Windows.Forms.Button button72;
         private System.Windows.Forms.DataGridViewTextBoxColumn donorID;
         private System.Windows.Forms.DataGridViewTextBoxColumn donorName;
+        private System.Windows.Forms.Button DonorID_Clear_Btn;
+        private System.Windows.Forms.Button FindDonorID_button;
     }
 }
 
