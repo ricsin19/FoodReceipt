@@ -2,7 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 
-namespace ClientcardFB3
+namespace FoodReceipt
 {
     public class Userlist
     {

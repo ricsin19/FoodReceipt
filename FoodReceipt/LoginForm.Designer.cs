@@ -1,4 +1,4 @@
-﻿namespace ClientcardFB3
+﻿namespace FoodReceipt
 {
     partial class LoginForm
     {

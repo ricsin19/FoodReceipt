@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace ClientcardFB3
+namespace FoodReceipt
 {
     public class CCFBPrefs
     {
@@ -87,7 +87,7 @@ namespace ClientcardFB3
         public static bool IncludeLbsOnSvcList = true;
         #endregion
 
-        #region Automated Scale Feature
+        #region Automated USBScale Feature
         public static bool EnableFTscale = true;
         public static bool LbsIncludeCommodityWt = true;
         #endregion

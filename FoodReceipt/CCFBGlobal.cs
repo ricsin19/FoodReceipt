@@ -10,7 +10,7 @@ using System.Runtime;
 using System.Runtime.InteropServices;
 using Microsoft.Win32;
 
-namespace ClientcardFB3
+namespace FoodReceipt
 {
     class CCFBGlobal
     {

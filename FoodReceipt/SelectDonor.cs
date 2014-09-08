@@ -10,7 +10,7 @@ using FoodReceipt;
 using System.Data.SqlClient;
 using System.Collections;
 
-namespace ClientcardFB3
+namespace FoodReceipt
 {
     public partial class SelectDonor : Form
     {
@@ -30,7 +30,6 @@ namespace ClientcardFB3
         }
         private void formLoad()
         {
-
             IEnumerator enumerator = this.tabPage2.Controls.GetEnumerator();
             IEnumerator enumerator1 = this.tabPage1.Controls.GetEnumerator();
             clsFoodDonations.getFavorite();
@@ -141,7 +140,7 @@ namespace ClientcardFB3
                 int selectedRowIndex = dgvDonorList.CurrentCell.RowIndex;
                 string ID = dgvDonorList.Rows[selectedRowIndex].Cells[0].Value.ToString().Trim();
                 string Name = dgvDonorList.Rows[selectedRowIndex].Cells[1].Value.ToString();
-                FoodDonation frm2 = new FoodDonation(ID, Name);
+                FoodDonationForm frm2 = new FoodDonationForm(ID, Name);
                 frm2.Show();
             }
             catch (Exception ex)
@@ -155,7 +154,7 @@ namespace ClientcardFB3
         private void favBtn_Click(object sender, MouseEventArgs e)
         {
             Button b = (Button)sender;
-            FoodDonation frm2 = new FoodDonation(b.Name, b.Text);
+            FoodDonationForm frm2 = new FoodDonationForm(b.Name, b.Text);
             frm2.Show();
         }
 
@@ -203,6 +202,37 @@ namespace ClientcardFB3
         {
             dgvDonorList.Rows.Clear();
         }
-        
+        private void dgvDonorList_Resize(object sender, EventArgs e)
+        {
+            ResizeGridColumns();
+        }
+
+        private void ResizeGridColumns()
+        {
+            //get sum of non-resizable columns width
+            int diffWidth = 0;
+            foreach (DataGridViewColumn col in dgvDonorList.Columns)
+            {
+                if (col.Resizable == DataGridViewTriState.False && col.Visible) diffWidth += col.Width;
+            }
+
+            //calculate available width
+            int totalResizableWith = dgvDonorList.Width - diffWidth;
+
+            //resize column width based on previous proportions
+            for (int i = 0; i < dgvDonorList.ColumnCount; i++)
+            {
+                try
+                {
+                    if (dgvDonorList.Columns[i].Resizable != DataGridViewTriState.False && dgvDonorList.Columns[i].Visible)
+                    {
+                        dgvDonorList.Columns[i].Width = (int)Math.Floor((decimal)totalResizableWith / dgvDonorList.ColumnCount);
+                    }
+                }
+                catch { }
+            }
+            //dgvFT.Columns[dgvFT.ColumnCount - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgvDonorList.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+        }
     }
 }

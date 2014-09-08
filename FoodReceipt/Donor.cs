@@ -2,7 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 
-namespace ClientcardFB3
+namespace FoodReceipt
 {
     public class Donors
     {
@@ -568,7 +568,10 @@ namespace ClientcardFB3
                     dadAdpt.Update(dset, "Donors");
                     closeConnection();
                 }
-                catch (SqlException ex) { }
+                catch (SqlException ex) {
+
+                    CCFBGlobal.appendErrorToErrorReport("", ex.GetBaseException().ToString());
+                }
             }
         }
 

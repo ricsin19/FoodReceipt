@@ -20,7 +20,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 
 
-namespace ClientcardFB3
+namespace FoodReceipt
 {
     public class parmTypeCodes
     {

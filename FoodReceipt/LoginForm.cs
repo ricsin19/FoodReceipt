@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Windows.Forms;
 using Microsoft.Win32;
 
-namespace ClientcardFB3
+namespace FoodReceipt
 {
     public partial class LoginForm : Form
     {

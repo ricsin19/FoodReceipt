@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HidLibrary">
+      <HintPath>..\..\HidLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -55,11 +58,11 @@
     <Compile Include="CCFBGlobal.cs" />
     <Compile Include="CCFBPrefs.cs" />
     <Compile Include="Donor.cs" />
-    <Compile Include="FoodDonation.cs">
+    <Compile Include="FoodDonationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FoodDonation.Designer.cs">
-      <DependentUpon>FoodDonation.cs</DependentUpon>
+    <Compile Include="FoodDonationForm.Designer.cs">
+      <DependentUpon>FoodDonationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FoodDonations.cs" />
     <Compile Include="LoginForm.cs">
@@ -69,6 +72,7 @@
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="parmTypeCodes.cs" />
+    <Compile Include="USBScale.cs" />
     <Compile Include="SelectDonor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,9 +81,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserFields.cs" />
     <Compile Include="UserList.cs" />
-    <EmbeddedResource Include="FoodDonation.resx">
-      <DependentUpon>FoodDonation.cs</DependentUpon>
+    <EmbeddedResource Include="FoodDonationForm.resx">
+      <DependentUpon>FoodDonationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

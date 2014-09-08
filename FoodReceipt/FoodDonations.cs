@@ -2,7 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 
-namespace ClientcardFB3
+namespace FoodReceipt
 {
     public class FoodDonations
     {
@@ -16,7 +16,7 @@ namespace ClientcardFB3
         int iRowCount = 0;
         bool isValid = false;
         DataRow dRow = null;
-
+ 
 
         public enum datefieldselection { Created = 0, TrxDate = 1 }
 
@@ -182,7 +182,6 @@ namespace ClientcardFB3
             if (rowIndex < iRowCount && rowIndex >= 0)
                 dRow = dset.Tables[tbName].Rows[rowIndex];
         }
-
         public void getFavorite()
         {
             try
@@ -203,6 +202,67 @@ namespace ClientcardFB3
                 CCFBGlobal.appendErrorToErrorReport("",ex.GetBaseException().ToString());
                 closeConnection();
                 iRowCount = 0;
+            }
+        }
+
+        public void openAll()
+        {
+            try
+            {
+                closeConnection();
+                command = new SqlCommand("SELECT * FROM " + tbName, conn);
+                dadAdpt = new SqlDataAdapter(command);
+                dadAdpt.SelectCommand = command;
+                dset.Clear();
+                iRowCount = dadAdpt.Fill(dset, tbName);
+                if (iRowCount > 0)
+                    dRow = dset.Tables[tbName].Rows[0];
+                closeConnection();
+            }
+            catch (SqlException ex)
+            {
+                CCFBGlobal.appendErrorToErrorReport("", ex.GetBaseException().ToString());
+                closeConnection();
+                iRowCount = 0;
+            }
+        }
+        public void insert()
+        {
+            if (dadAdpt.UpdateCommand == null || dadAdpt.InsertCommand == null)
+            {
+                SqlCommandBuilder commBuilder = new SqlCommandBuilder(dadAdpt);
+            }
+
+            try
+            {
+                openConnection();
+                dadAdpt.Update(dset, tbName);
+                closeConnection();
+            }
+            catch (SqlException ex)
+            {
+                CCFBGlobal.appendErrorToErrorReport("", ex.GetBaseException().ToString());
+            }
+        }
+
+        public void update()
+        {
+            if (dset.HasChanges() == true)
+            {
+                try
+                {
+                    openConnection();
+                    if (dadAdpt.UpdateCommand == null)
+                    {
+                        SqlCommandBuilder commBuilder = new SqlCommandBuilder(dadAdpt);
+                    }
+                    dadAdpt.Update(dset, tbName);
+                    closeConnection();
+                }
+                catch (SqlException ex)
+                {
+                    CCFBGlobal.appendErrorToErrorReport("", ex.GetBaseException().ToString());
+                }
             }
         }
 
