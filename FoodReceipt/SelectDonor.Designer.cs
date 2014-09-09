@@ -117,9 +117,9 @@
             this.btnCLR = new System.Windows.Forms.Button();
             this.btn0 = new System.Windows.Forms.Button();
             this.dgvDonorList = new System.Windows.Forms.DataGridView();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.donorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.donorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -1269,24 +1269,6 @@
             this.dgvDonorList.TabIndex = 2;
             this.dgvDonorList.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDonorList_CellMouseClick);
             // 
-            // splitContainer1
-            // 
-            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.splitContainer1.Panel1.Controls.Add(this.tabControl1);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.dgvDonorList);
-            this.splitContainer1.Size = new System.Drawing.Size(1275, 765);
-            this.splitContainer1.SplitterDistance = 550;
-            this.splitContainer1.TabIndex = 5;
-            // 
             // donorID
             // 
             this.donorID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -1314,13 +1296,31 @@
             this.donorName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.donorName.Width = 635;
             // 
+            // splitContainer1
+            // 
+            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.splitContainer1.Panel1.Controls.Add(this.tabControl1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.dgvDonorList);
+            this.splitContainer1.Size = new System.Drawing.Size(1275, 765);
+            this.splitContainer1.SplitterDistance = 550;
+            this.splitContainer1.TabIndex = 5;
+            // 
             // SelectDonor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1276, 753);
+            this.ClientSize = new System.Drawing.Size(1276, 705);
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
