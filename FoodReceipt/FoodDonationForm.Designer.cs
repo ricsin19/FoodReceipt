@@ -274,10 +274,10 @@
             this.scaleWt.Location = new System.Drawing.Point(123, 34);
             this.scaleWt.Multiline = true;
             this.scaleWt.Name = "scaleWt";
+            this.scaleWt.ReadOnly = true;
             this.scaleWt.Size = new System.Drawing.Size(107, 35);
             this.scaleWt.TabIndex = 13;
             this.scaleWt.Text = "0";
-            this.scaleWt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbScaleWt_KeyPress);
             // 
             // LogEntrySave
             // 
@@ -379,10 +379,10 @@
             this.tbLbs.Location = new System.Drawing.Point(309, 34);
             this.tbLbs.Multiline = true;
             this.tbLbs.Name = "tbLbs";
+            this.tbLbs.ReadOnly = true;
             this.tbLbs.Size = new System.Drawing.Size(107, 35);
             this.tbLbs.TabIndex = 22;
             this.tbLbs.Text = "0";
-            this.tbLbs.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbScaleWt_KeyPress);
             // 
             // addWeightButton
             // 
@@ -423,7 +423,7 @@
             this.clrBtn.TabIndex = 27;
             this.clrBtn.Text = "Clear";
             this.clrBtn.UseVisualStyleBackColor = true;
-            this.clrBtn.Click += new System.EventHandler(this.clrBtn_Click);
+            this.clrBtn.MouseClick += new System.Windows.Forms.MouseEventHandler(this.clrBtn_Click);
             // 
             // refreshBtn
             // 
@@ -435,7 +435,7 @@
             this.refreshBtn.TabIndex = 26;
             this.refreshBtn.Text = "Refresh";
             this.refreshBtn.UseVisualStyleBackColor = true;
-            this.refreshBtn.Click += new System.EventHandler(this.refreshBtn_Click);
+            this.refreshBtn.MouseClick += new System.Windows.Forms.MouseEventHandler(this.refreshBtn_Click);
             // 
             // label7
             // 
@@ -512,7 +512,7 @@
             // 
             this.noteTxt.BackColor = System.Drawing.Color.PowderBlue;
             this.noteTxt.Cursor = System.Windows.Forms.Cursors.Default;
-            this.noteTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noteTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.noteTxt.Location = new System.Drawing.Point(863, 466);
             this.noteTxt.Multiline = true;
             this.noteTxt.Name = "noteTxt";
@@ -528,10 +528,11 @@
             this.chkUserFlag0.ForeColor = System.Drawing.Color.DarkBlue;
             this.chkUserFlag0.Location = new System.Drawing.Point(190, 605);
             this.chkUserFlag0.Name = "chkUserFlag0";
-            this.chkUserFlag0.Size = new System.Drawing.Size(111, 24);
+            this.chkUserFlag0.Size = new System.Drawing.Size(73, 24);
             this.chkUserFlag0.TabIndex = 31;
-            this.chkUserFlag0.Text = "UserFlag0";
+            this.chkUserFlag0.Text = "Flag0";
             this.chkUserFlag0.UseVisualStyleBackColor = true;
+            this.chkUserFlag0.Visible = false;
             // 
             // chkUserFlag1
             // 
@@ -542,10 +543,11 @@
             this.chkUserFlag1.ForeColor = System.Drawing.Color.DarkBlue;
             this.chkUserFlag1.Location = new System.Drawing.Point(314, 605);
             this.chkUserFlag1.Name = "chkUserFlag1";
-            this.chkUserFlag1.Size = new System.Drawing.Size(111, 24);
+            this.chkUserFlag1.Size = new System.Drawing.Size(73, 24);
             this.chkUserFlag1.TabIndex = 32;
-            this.chkUserFlag1.Text = "UserFlag1";
+            this.chkUserFlag1.Text = "Flag1";
             this.chkUserFlag1.UseVisualStyleBackColor = true;
+            this.chkUserFlag1.Visible = false;
             // 
             // chkUserFlag2
             // 
@@ -556,10 +558,11 @@
             this.chkUserFlag2.ForeColor = System.Drawing.Color.DarkBlue;
             this.chkUserFlag2.Location = new System.Drawing.Point(437, 605);
             this.chkUserFlag2.Name = "chkUserFlag2";
-            this.chkUserFlag2.Size = new System.Drawing.Size(111, 24);
+            this.chkUserFlag2.Size = new System.Drawing.Size(73, 24);
             this.chkUserFlag2.TabIndex = 33;
-            this.chkUserFlag2.Text = "UserFlag2";
+            this.chkUserFlag2.Text = "Flag2";
             this.chkUserFlag2.UseVisualStyleBackColor = true;
+            this.chkUserFlag2.Visible = false;
             // 
             // FoodDonationForm
             // 
