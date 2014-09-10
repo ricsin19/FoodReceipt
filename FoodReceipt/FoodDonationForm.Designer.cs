@@ -28,20 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FoodDonationForm));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.fdClass13 = new System.Windows.Forms.Button();
+            this.fdClass12 = new System.Windows.Forms.Button();
+            this.fdClass11 = new System.Windows.Forms.Button();
+            this.fdClass10 = new System.Windows.Forms.Button();
+            this.fdClass9 = new System.Windows.Forms.Button();
+            this.fdClass8 = new System.Windows.Forms.Button();
+            this.fdClass7 = new System.Windows.Forms.Button();
+            this.fdClass6 = new System.Windows.Forms.Button();
+            this.fdClass5 = new System.Windows.Forms.Button();
+            this.fdClass4 = new System.Windows.Forms.Button();
+            this.fdClass3 = new System.Windows.Forms.Button();
+            this.fdClass2 = new System.Windows.Forms.Button();
+            this.fdClass1 = new System.Windows.Forms.Button();
             this.scaleWt = new System.Windows.Forms.TextBox();
             this.LogEntrySave = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
@@ -56,21 +58,27 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.clrBtn = new System.Windows.Forms.Button();
             this.refreshBtn = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.labelTotalScaleLbs = new System.Windows.Forms.Label();
+            this.labelScaleLbs = new System.Windows.Forms.Label();
             this.labelDonorID = new System.Windows.Forms.Label();
             this.labelDonorName = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.noteTxt = new System.Windows.Forms.TextBox();
-            this.chkUserFlag0 = new System.Windows.Forms.CheckBox();
-            this.chkUserFlag1 = new System.Windows.Forms.CheckBox();
-            this.chkUserFlag2 = new System.Windows.Forms.CheckBox();
+            this.chkFlag0 = new System.Windows.Forms.CheckBox();
+            this.chkFlag1 = new System.Windows.Forms.CheckBox();
+            this.chkFlag2 = new System.Windows.Forms.CheckBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label9 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.tssStatusStrip = new System.Windows.Forms.StatusStrip();
+            this.tssStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.tssStatusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -78,194 +86,181 @@
             this.groupBox2.AutoSize = true;
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.groupBox2.Controls.Add(this.button14);
-            this.groupBox2.Controls.Add(this.button13);
-            this.groupBox2.Controls.Add(this.button12);
-            this.groupBox2.Controls.Add(this.button11);
-            this.groupBox2.Controls.Add(this.button10);
-            this.groupBox2.Controls.Add(this.button9);
-            this.groupBox2.Controls.Add(this.button8);
-            this.groupBox2.Controls.Add(this.button7);
-            this.groupBox2.Controls.Add(this.button6);
-            this.groupBox2.Controls.Add(this.button5);
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.fdClass13);
+            this.groupBox2.Controls.Add(this.fdClass12);
+            this.groupBox2.Controls.Add(this.fdClass11);
+            this.groupBox2.Controls.Add(this.fdClass10);
+            this.groupBox2.Controls.Add(this.fdClass9);
+            this.groupBox2.Controls.Add(this.fdClass8);
+            this.groupBox2.Controls.Add(this.fdClass7);
+            this.groupBox2.Controls.Add(this.fdClass6);
+            this.groupBox2.Controls.Add(this.fdClass5);
+            this.groupBox2.Controls.Add(this.fdClass4);
+            this.groupBox2.Controls.Add(this.fdClass3);
+            this.groupBox2.Controls.Add(this.fdClass2);
+            this.groupBox2.Controls.Add(this.fdClass1);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox2.Location = new System.Drawing.Point(190, 166);
+            this.groupBox2.Location = new System.Drawing.Point(189, 156);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(916, 266);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             // 
-            // button14
+            // fdClass13
             // 
-            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.ForeColor = System.Drawing.Color.DarkBlue;
-            this.button14.Location = new System.Drawing.Point(728, 26);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(119, 63);
-            this.button14.TabIndex = 12;
-            this.button14.Text = "button14";
-            this.button14.UseVisualStyleBackColor = false;
-            this.button14.MouseClick += new System.Windows.Forms.MouseEventHandler(this.foodClassbutton_Click);
+            this.fdClass13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.fdClass13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fdClass13.ForeColor = System.Drawing.Color.DarkBlue;
+            this.fdClass13.Location = new System.Drawing.Point(728, 26);
+            this.fdClass13.Name = "fdClass13";
+            this.fdClass13.Size = new System.Drawing.Size(119, 63);
+            this.fdClass13.TabIndex = 12;
+            this.fdClass13.UseVisualStyleBackColor = false;
+            this.fdClass13.MouseClick += new System.Windows.Forms.MouseEventHandler(this.foodClassbutton_Click);
             // 
-            // button13
+            // fdClass12
             // 
-            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.ForeColor = System.Drawing.Color.DarkBlue;
-            this.button13.Location = new System.Drawing.Point(563, 184);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(131, 63);
-            this.button13.TabIndex = 11;
-            this.button13.Text = "button13";
-            this.button13.UseVisualStyleBackColor = false;
-            this.button13.MouseClick += new System.Windows.Forms.MouseEventHandler(this.foodClassbutton_Click);
+            this.fdClass12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.fdClass12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fdClass12.ForeColor = System.Drawing.Color.DarkBlue;
+            this.fdClass12.Location = new System.Drawing.Point(563, 184);
+            this.fdClass12.Name = "fdClass12";
+            this.fdClass12.Size = new System.Drawing.Size(131, 63);
+            this.fdClass12.TabIndex = 11;
+            this.fdClass12.UseVisualStyleBackColor = false;
+            this.fdClass12.MouseClick += new System.Windows.Forms.MouseEventHandler(this.foodClassbutton_Click);
             // 
-            // button12
+            // fdClass11
             // 
-            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.ForeColor = System.Drawing.Color.DarkBlue;
-            this.button12.Location = new System.Drawing.Point(563, 105);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(131, 63);
-            this.button12.TabIndex = 10;
-            this.button12.Text = "button12";
-            this.button12.UseVisualStyleBackColor = false;
-            this.button12.MouseClick += new System.Windows.Forms.MouseEventHandler(this.foodClassbutton_Click);
+            this.fdClass11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.fdClass11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fdClass11.ForeColor = System.Drawing.Color.DarkBlue;
+            this.fdClass11.Location = new System.Drawing.Point(563, 105);
+            this.fdClass11.Name = "fdClass11";
+            this.fdClass11.Size = new System.Drawing.Size(131, 63);
+            this.fdClass11.TabIndex = 10;
+            this.fdClass11.UseVisualStyleBackColor = false;
+            this.fdClass11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.foodClassbutton_Click);
             // 
-            // button11
+            // fdClass10
             // 
-            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.ForeColor = System.Drawing.Color.DarkBlue;
-            this.button11.Location = new System.Drawing.Point(563, 26);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(131, 63);
-            this.button11.TabIndex = 9;
-            this.button11.Text = "button11";
-            this.button11.UseVisualStyleBackColor = false;
-            this.button11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.foodClassbutton_Click);
+            this.fdClass10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.fdClass10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fdClass10.ForeColor = System.Drawing.Color.DarkBlue;
+            this.fdClass10.Location = new System.Drawing.Point(563, 26);
+            this.fdClass10.Name = "fdClass10";
+            this.fdClass10.Size = new System.Drawing.Size(131, 63);
+            this.fdClass10.TabIndex = 9;
+            this.fdClass10.UseVisualStyleBackColor = false;
+            this.fdClass10.MouseClick += new System.Windows.Forms.MouseEventHandler(this.foodClassbutton_Click);
             // 
-            // button10
+            // fdClass9
             // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.DarkBlue;
-            this.button10.Location = new System.Drawing.Point(391, 184);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(134, 63);
-            this.button10.TabIndex = 8;
-            this.button10.Text = "button10";
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.MouseClick += new System.Windows.Forms.MouseEventHandler(this.foodClassbutton_Click);
+            this.fdClass9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.fdClass9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fdClass9.ForeColor = System.Drawing.Color.DarkBlue;
+            this.fdClass9.Location = new System.Drawing.Point(391, 184);
+            this.fdClass9.Name = "fdClass9";
+            this.fdClass9.Size = new System.Drawing.Size(134, 63);
+            this.fdClass9.TabIndex = 8;
+            this.fdClass9.UseVisualStyleBackColor = false;
+            this.fdClass9.MouseClick += new System.Windows.Forms.MouseEventHandler(this.foodClassbutton_Click);
             // 
-            // button9
+            // fdClass8
             // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.DarkBlue;
-            this.button9.Location = new System.Drawing.Point(391, 105);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(134, 63);
-            this.button9.TabIndex = 7;
-            this.button9.Text = "button9";
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.MouseClick += new System.Windows.Forms.MouseEventHandler(this.foodClassbutton_Click);
+            this.fdClass8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.fdClass8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fdClass8.ForeColor = System.Drawing.Color.DarkBlue;
+            this.fdClass8.Location = new System.Drawing.Point(391, 105);
+            this.fdClass8.Name = "fdClass8";
+            this.fdClass8.Size = new System.Drawing.Size(134, 63);
+            this.fdClass8.TabIndex = 7;
+            this.fdClass8.UseVisualStyleBackColor = false;
+            this.fdClass8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.foodClassbutton_Click);
             // 
-            // button8
+            // fdClass7
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.DarkBlue;
-            this.button8.Location = new System.Drawing.Point(391, 26);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(134, 63);
-            this.button8.TabIndex = 6;
-            this.button8.Text = "button8";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.foodClassbutton_Click);
+            this.fdClass7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.fdClass7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fdClass7.ForeColor = System.Drawing.Color.DarkBlue;
+            this.fdClass7.Location = new System.Drawing.Point(391, 26);
+            this.fdClass7.Name = "fdClass7";
+            this.fdClass7.Size = new System.Drawing.Size(134, 63);
+            this.fdClass7.TabIndex = 6;
+            this.fdClass7.UseVisualStyleBackColor = false;
+            this.fdClass7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.foodClassbutton_Click);
             // 
-            // button7
+            // fdClass6
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.DarkBlue;
-            this.button7.Location = new System.Drawing.Point(229, 184);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(125, 63);
-            this.button7.TabIndex = 5;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.foodClassbutton_Click);
+            this.fdClass6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.fdClass6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fdClass6.ForeColor = System.Drawing.Color.DarkBlue;
+            this.fdClass6.Location = new System.Drawing.Point(229, 184);
+            this.fdClass6.Name = "fdClass6";
+            this.fdClass6.Size = new System.Drawing.Size(125, 63);
+            this.fdClass6.TabIndex = 5;
+            this.fdClass6.UseVisualStyleBackColor = false;
+            this.fdClass6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.foodClassbutton_Click);
             // 
-            // button6
+            // fdClass5
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.DarkBlue;
-            this.button6.Location = new System.Drawing.Point(229, 105);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(125, 63);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.foodClassbutton_Click);
+            this.fdClass5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.fdClass5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fdClass5.ForeColor = System.Drawing.Color.DarkBlue;
+            this.fdClass5.Location = new System.Drawing.Point(229, 105);
+            this.fdClass5.Name = "fdClass5";
+            this.fdClass5.Size = new System.Drawing.Size(125, 63);
+            this.fdClass5.TabIndex = 4;
+            this.fdClass5.UseVisualStyleBackColor = false;
+            this.fdClass5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.foodClassbutton_Click);
             // 
-            // button5
+            // fdClass4
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.DarkBlue;
-            this.button5.Location = new System.Drawing.Point(230, 26);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(125, 63);
-            this.button5.TabIndex = 3;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.foodClassbutton_Click);
+            this.fdClass4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.fdClass4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fdClass4.ForeColor = System.Drawing.Color.DarkBlue;
+            this.fdClass4.Location = new System.Drawing.Point(230, 26);
+            this.fdClass4.Name = "fdClass4";
+            this.fdClass4.Size = new System.Drawing.Size(125, 63);
+            this.fdClass4.TabIndex = 3;
+            this.fdClass4.UseVisualStyleBackColor = false;
+            this.fdClass4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.foodClassbutton_Click);
             // 
-            // button4
+            // fdClass3
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.DarkBlue;
-            this.button4.Location = new System.Drawing.Point(51, 184);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(138, 63);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.foodClassbutton_Click);
+            this.fdClass3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.fdClass3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fdClass3.ForeColor = System.Drawing.Color.DarkBlue;
+            this.fdClass3.Location = new System.Drawing.Point(51, 184);
+            this.fdClass3.Name = "fdClass3";
+            this.fdClass3.Size = new System.Drawing.Size(138, 63);
+            this.fdClass3.TabIndex = 2;
+            this.fdClass3.UseVisualStyleBackColor = false;
+            this.fdClass3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.foodClassbutton_Click);
             // 
-            // button3
+            // fdClass2
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.DarkBlue;
-            this.button3.Location = new System.Drawing.Point(51, 105);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(138, 63);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.foodClassbutton_Click);
+            this.fdClass2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.fdClass2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fdClass2.ForeColor = System.Drawing.Color.DarkBlue;
+            this.fdClass2.Location = new System.Drawing.Point(51, 105);
+            this.fdClass2.Name = "fdClass2";
+            this.fdClass2.Size = new System.Drawing.Size(138, 63);
+            this.fdClass2.TabIndex = 1;
+            this.fdClass2.UseVisualStyleBackColor = false;
+            this.fdClass2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.foodClassbutton_Click);
             // 
-            // button2
+            // fdClass1
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.DarkBlue;
-            this.button2.Location = new System.Drawing.Point(51, 26);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(138, 63);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.foodClassbutton_Click);
+            this.fdClass1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.fdClass1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fdClass1.ForeColor = System.Drawing.Color.DarkBlue;
+            this.fdClass1.Location = new System.Drawing.Point(51, 26);
+            this.fdClass1.Name = "fdClass1";
+            this.fdClass1.Size = new System.Drawing.Size(138, 63);
+            this.fdClass1.TabIndex = 0;
+            this.fdClass1.UseVisualStyleBackColor = false;
+            this.fdClass1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.foodClassbutton_Click);
             // 
             // scaleWt
             // 
@@ -277,16 +272,17 @@
             this.scaleWt.Size = new System.Drawing.Size(107, 35);
             this.scaleWt.TabIndex = 13;
             this.scaleWt.Text = "0";
+            this.scaleWt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.scaleWt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbScaleWt_KeyPress);
             // 
             // LogEntrySave
             // 
             this.LogEntrySave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.LogEntrySave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogEntrySave.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogEntrySave.ForeColor = System.Drawing.Color.DarkBlue;
-            this.LogEntrySave.Location = new System.Drawing.Point(528, 652);
+            this.LogEntrySave.Location = new System.Drawing.Point(816, 595);
             this.LogEntrySave.Name = "LogEntrySave";
-            this.LogEntrySave.Size = new System.Drawing.Size(110, 49);
+            this.LogEntrySave.Size = new System.Drawing.Size(144, 63);
             this.LogEntrySave.TabIndex = 14;
             this.LogEntrySave.Text = "SAVE";
             this.LogEntrySave.UseVisualStyleBackColor = false;
@@ -295,11 +291,11 @@
             // cancelBtn
             // 
             this.cancelBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelBtn.ForeColor = System.Drawing.Color.DarkBlue;
-            this.cancelBtn.Location = new System.Drawing.Point(692, 652);
+            this.cancelBtn.Location = new System.Drawing.Point(1018, 595);
             this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(109, 49);
+            this.cancelBtn.Size = new System.Drawing.Size(144, 63);
             this.cancelBtn.TabIndex = 15;
             this.cancelBtn.Text = "CANCEL";
             this.cancelBtn.UseVisualStyleBackColor = false;
@@ -343,7 +339,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label4.Location = new System.Drawing.Point(24, 466);
+            this.label4.Location = new System.Drawing.Point(24, 451);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 24);
             this.label4.TabIndex = 19;
@@ -382,6 +378,7 @@
             this.tbLbs.Size = new System.Drawing.Size(107, 35);
             this.tbLbs.TabIndex = 22;
             this.tbLbs.Text = "0";
+            this.tbLbs.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbLbs.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbScaleWt_KeyPress);
             // 
             // addWeightButton
@@ -403,12 +400,12 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.clrBtn);
             this.panel1.Controls.Add(this.refreshBtn);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.labelTotalScaleLbs);
+            this.panel1.Controls.Add(this.labelScaleLbs);
             this.panel1.Controls.Add(this.scaleWt);
             this.panel1.Controls.Add(this.tbLbs);
             this.panel1.Controls.Add(this.addWeightButton);
-            this.panel1.Location = new System.Drawing.Point(189, 466);
+            this.panel1.Location = new System.Drawing.Point(199, 454);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(543, 103);
             this.panel1.TabIndex = 24;
@@ -423,7 +420,7 @@
             this.clrBtn.TabIndex = 27;
             this.clrBtn.Text = "Clear";
             this.clrBtn.UseVisualStyleBackColor = true;
-            this.clrBtn.Click += new System.EventHandler(this.clrBtn_Click);
+            this.clrBtn.MouseClick += new System.Windows.Forms.MouseEventHandler(this.clrBtn_Click);
             // 
             // refreshBtn
             // 
@@ -435,29 +432,29 @@
             this.refreshBtn.TabIndex = 26;
             this.refreshBtn.Text = "Refresh";
             this.refreshBtn.UseVisualStyleBackColor = true;
-            this.refreshBtn.Click += new System.EventHandler(this.refreshBtn_Click);
+            this.refreshBtn.MouseClick += new System.Windows.Forms.MouseEventHandler(this.refreshBtn_Click);
             // 
-            // label7
+            // labelTotalScaleLbs
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label7.Location = new System.Drawing.Point(305, 7);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(133, 20);
-            this.label7.TabIndex = 25;
-            this.label7.Text = "Total Scale Lbs";
+            this.labelTotalScaleLbs.AutoSize = true;
+            this.labelTotalScaleLbs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotalScaleLbs.ForeColor = System.Drawing.Color.DarkBlue;
+            this.labelTotalScaleLbs.Location = new System.Drawing.Point(305, 7);
+            this.labelTotalScaleLbs.Name = "labelTotalScaleLbs";
+            this.labelTotalScaleLbs.Size = new System.Drawing.Size(133, 20);
+            this.labelTotalScaleLbs.TabIndex = 25;
+            this.labelTotalScaleLbs.Text = "Total Scale Lbs";
             // 
-            // label6
+            // labelScaleLbs
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label6.Location = new System.Drawing.Point(119, 11);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 20);
-            this.label6.TabIndex = 24;
-            this.label6.Text = "Scale Lbs";
+            this.labelScaleLbs.AutoSize = true;
+            this.labelScaleLbs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelScaleLbs.ForeColor = System.Drawing.Color.DarkBlue;
+            this.labelScaleLbs.Location = new System.Drawing.Point(119, 11);
+            this.labelScaleLbs.Name = "labelScaleLbs";
+            this.labelScaleLbs.Size = new System.Drawing.Size(88, 20);
+            this.labelScaleLbs.TabIndex = 24;
+            this.labelScaleLbs.Text = "Scale Lbs";
             // 
             // labelDonorID
             // 
@@ -512,65 +509,113 @@
             // 
             this.noteTxt.BackColor = System.Drawing.Color.PowderBlue;
             this.noteTxt.Cursor = System.Windows.Forms.Cursors.Default;
-            this.noteTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noteTxt.Location = new System.Drawing.Point(863, 466);
+            this.noteTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noteTxt.Location = new System.Drawing.Point(863, 454);
             this.noteTxt.Multiline = true;
             this.noteTxt.Name = "noteTxt";
             this.noteTxt.Size = new System.Drawing.Size(242, 103);
             this.noteTxt.TabIndex = 30;
             // 
-            // chkUserFlag0
+            // chkFlag0
             // 
-            this.chkUserFlag0.AutoSize = true;
-            this.chkUserFlag0.Cursor = System.Windows.Forms.Cursors.Default;
-            this.chkUserFlag0.Enabled = false;
-            this.chkUserFlag0.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkUserFlag0.ForeColor = System.Drawing.Color.DarkBlue;
-            this.chkUserFlag0.Location = new System.Drawing.Point(190, 605);
-            this.chkUserFlag0.Name = "chkUserFlag0";
-            this.chkUserFlag0.Size = new System.Drawing.Size(111, 24);
-            this.chkUserFlag0.TabIndex = 31;
-            this.chkUserFlag0.Text = "UserFlag0";
-            this.chkUserFlag0.UseVisualStyleBackColor = true;
+            this.chkFlag0.AutoSize = true;
+            this.chkFlag0.Cursor = System.Windows.Forms.Cursors.Default;
+            this.chkFlag0.Enabled = false;
+            this.chkFlag0.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkFlag0.ForeColor = System.Drawing.Color.DarkBlue;
+            this.chkFlag0.Location = new System.Drawing.Point(190, 605);
+            this.chkFlag0.Name = "chkFlag0";
+            this.chkFlag0.Size = new System.Drawing.Size(73, 24);
+            this.chkFlag0.TabIndex = 31;
+            this.chkFlag0.Text = "Flag0";
+            this.chkFlag0.UseVisualStyleBackColor = true;
+            this.chkFlag0.Visible = false;
             // 
-            // chkUserFlag1
+            // chkFlag1
             // 
-            this.chkUserFlag1.AutoSize = true;
-            this.chkUserFlag1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.chkUserFlag1.Enabled = false;
-            this.chkUserFlag1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkUserFlag1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.chkUserFlag1.Location = new System.Drawing.Point(314, 605);
-            this.chkUserFlag1.Name = "chkUserFlag1";
-            this.chkUserFlag1.Size = new System.Drawing.Size(111, 24);
-            this.chkUserFlag1.TabIndex = 32;
-            this.chkUserFlag1.Text = "UserFlag1";
-            this.chkUserFlag1.UseVisualStyleBackColor = true;
+            this.chkFlag1.AutoSize = true;
+            this.chkFlag1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.chkFlag1.Enabled = false;
+            this.chkFlag1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkFlag1.ForeColor = System.Drawing.Color.DarkBlue;
+            this.chkFlag1.Location = new System.Drawing.Point(314, 605);
+            this.chkFlag1.Name = "chkFlag1";
+            this.chkFlag1.Size = new System.Drawing.Size(73, 24);
+            this.chkFlag1.TabIndex = 32;
+            this.chkFlag1.Text = "Flag1";
+            this.chkFlag1.UseVisualStyleBackColor = true;
+            this.chkFlag1.Visible = false;
             // 
-            // chkUserFlag2
+            // chkFlag2
             // 
-            this.chkUserFlag2.AutoSize = true;
-            this.chkUserFlag2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.chkUserFlag2.Enabled = false;
-            this.chkUserFlag2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkUserFlag2.ForeColor = System.Drawing.Color.DarkBlue;
-            this.chkUserFlag2.Location = new System.Drawing.Point(437, 605);
-            this.chkUserFlag2.Name = "chkUserFlag2";
-            this.chkUserFlag2.Size = new System.Drawing.Size(111, 24);
-            this.chkUserFlag2.TabIndex = 33;
-            this.chkUserFlag2.Text = "UserFlag2";
-            this.chkUserFlag2.UseVisualStyleBackColor = true;
+            this.chkFlag2.AutoSize = true;
+            this.chkFlag2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.chkFlag2.Enabled = false;
+            this.chkFlag2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkFlag2.ForeColor = System.Drawing.Color.DarkBlue;
+            this.chkFlag2.Location = new System.Drawing.Point(437, 605);
+            this.chkFlag2.Name = "chkFlag2";
+            this.chkFlag2.Size = new System.Drawing.Size(73, 24);
+            this.chkFlag2.TabIndex = 33;
+            this.chkFlag2.Text = "Flag2";
+            this.chkFlag2.UseVisualStyleBackColor = true;
+            this.chkFlag2.Visible = false;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(720, 94);
+            this.dateTimePicker1.MaxDate = new System.DateTime(2014, 9, 10, 0, 0, 0, 0);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 34;
+            this.dateTimePicker1.Value = new System.DateTime(2014, 9, 10, 0, 0, 0, 0);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label9.Location = new System.Drawing.Point(554, 90);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(141, 24);
+            this.label9.TabIndex = 35;
+            this.label9.Text = "Donation Date";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // tssStatusStrip
+            // 
+            this.tssStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tssStatus});
+            this.tssStatusStrip.Location = new System.Drawing.Point(0, 704);
+            this.tssStatusStrip.Name = "tssStatusStrip";
+            this.tssStatusStrip.Size = new System.Drawing.Size(1260, 22);
+            this.tssStatusStrip.TabIndex = 36;
+            this.tssStatusStrip.Text = "statusStrip1";
+            // 
+            // tssStatus
+            // 
+            this.tssStatus.AutoSize = false;
+            this.tssStatus.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)));
+            this.tssStatus.BorderStyle = System.Windows.Forms.Border3DStyle.Raised;
+            this.tssStatus.Name = "tssStatus";
+            this.tssStatus.Size = new System.Drawing.Size(118, 17);
             // 
             // FoodDonationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Khaki;
-            this.ClientSize = new System.Drawing.Size(1260, 701);
-            this.Controls.Add(this.chkUserFlag2);
-            this.Controls.Add(this.chkUserFlag1);
-            this.Controls.Add(this.chkUserFlag0);
+            this.ClientSize = new System.Drawing.Size(1260, 726);
+            this.Controls.Add(this.tssStatusStrip);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.chkFlag2);
+            this.Controls.Add(this.chkFlag1);
+            this.Controls.Add(this.chkFlag0);
             this.Controls.Add(this.noteTxt);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel1);
@@ -583,9 +628,10 @@
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.LogEntrySave);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FoodDonationForm";
             this.Text = "FoodDonationForm";
             this.Load += new System.EventHandler(this.FoodDonation_Load);
@@ -596,6 +642,8 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.tssStatusStrip.ResumeLayout(false);
+            this.tssStatusStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -611,19 +659,19 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button fdClass13;
+        private System.Windows.Forms.Button fdClass12;
+        private System.Windows.Forms.Button fdClass11;
+        private System.Windows.Forms.Button fdClass10;
+        private System.Windows.Forms.Button fdClass9;
+        private System.Windows.Forms.Button fdClass8;
+        private System.Windows.Forms.Button fdClass7;
+        private System.Windows.Forms.Button fdClass6;
+        private System.Windows.Forms.Button fdClass5;
+        private System.Windows.Forms.Button fdClass4;
+        private System.Windows.Forms.Button fdClass3;
+        private System.Windows.Forms.Button fdClass2;
+        private System.Windows.Forms.Button fdClass1;
         private System.Windows.Forms.ComboBox cboDonationType;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tbLbs;
@@ -633,15 +681,20 @@
         private System.Windows.Forms.Label labelDonorName;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelTotalScaleLbs;
+        private System.Windows.Forms.Label labelScaleLbs;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox noteTxt;
-        private System.Windows.Forms.CheckBox chkUserFlag0;
-        private System.Windows.Forms.CheckBox chkUserFlag1;
-        private System.Windows.Forms.CheckBox chkUserFlag2;
+        private System.Windows.Forms.CheckBox chkFlag0;
+        private System.Windows.Forms.CheckBox chkFlag1;
+        private System.Windows.Forms.CheckBox chkFlag2;
         private System.Windows.Forms.Button clrBtn;
         private System.Windows.Forms.Button refreshBtn;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.StatusStrip tssStatusStrip;
+        private System.Windows.Forms.ToolStripStatusLabel tssStatus;
 
 
     }

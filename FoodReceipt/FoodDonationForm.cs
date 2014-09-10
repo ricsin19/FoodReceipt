@@ -22,6 +22,10 @@ namespace FoodReceipt
         string donorID, donorName;
         int FoodClassSelected = 0;
         string FoodCodeSelected = "";
+
+        int refreshTimeLeft = 15;
+        int refreshTimeStart = 15;
+
         public FoodDonationForm(string val1, String val2)
         {
             InitializeComponent();
@@ -30,6 +34,7 @@ namespace FoodReceipt
             formLoad();
             fillCombos();
             initScalePort();
+            StartTimer();
 
         }
         private void FoodDonation_Load(object sender, EventArgs e)
@@ -56,6 +61,7 @@ namespace FoodReceipt
                     button.Text = parmFoodClass.GetLongName(i);
                     string tmp = parmFoodClass.GetLongName(i);
                     button.Name = parmFoodClass.GetId(tmp).ToString();
+                    FoodCodeSelected = button.Text;
                 }
                 clsFoodDonations.openAll();
             }
@@ -71,6 +77,7 @@ namespace FoodReceipt
             b.BackColor = Color.Aqua;
             FoodClassSelected = Convert.ToInt32(b.Name);
             FoodCodeSelected = b.Text;
+           
         }
         private void updateOtherBtnColor()
         {
@@ -80,7 +87,7 @@ namespace FoodReceipt
             {
                 enumerator1.MoveNext();
                 button = (System.Windows.Forms.Button)enumerator1.Current;
-                button.BackColor = Color.LightGray;
+                button.BackColor = Color.Empty;
             }
         }
 
@@ -146,7 +153,7 @@ namespace FoodReceipt
                 }
                 drow["Notes"] = noteTxt.Text.TrimEnd();
                 drow["FoodClass"] = FoodClassSelected;
-                drow["TrxDate"] = DateTime.Today.Date;
+                drow["TrxDate"] = dateTimePicker1.Value.ToShortDateString(); ;
                 drow["DonationType"] = cboDonationType.SelectedValue;
                 drow["FoodCode"] = FoodCodeSelected;
                 drow["DollarValue"] = 0;
@@ -171,16 +178,36 @@ namespace FoodReceipt
         {
             e.Handled = !(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back);
         }
-
-        private void refreshBtn_Click(object sender, EventArgs e)
+        private void refreshBtn_Click(object sender, MouseEventArgs e)
         {
             initScalePort();
         }
-
-        private void clrBtn_Click(object sender, EventArgs e)
+        private void clrBtn_Click(object sender, MouseEventArgs e)
         {
             scaleWt.Text = "0";
             tbLbs.Text = "0";
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            refreshTimeLeft--;
+            tssStatus.Text = refreshTimeLeft.ToString();
+            Application.DoEvents();
+            if (refreshTimeLeft <= 0)
+            {
+                initScalePort();
+                timer1.Stop();
+                StartTimer();
+            }
+
+        }
+        private void StartTimer()
+        {
+            refreshTimeLeft = refreshTimeStart;
+            tssStatus.Text = refreshTimeLeft.ToString();
+            tssStatus.BackColor = Color.Aquamarine;
+            timer1.Start();
+
         }
     }
 }
